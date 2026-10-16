@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PoDeSo – Il ne manque plus que Neuchâtel</title>
+<meta name="description" content="PoDeSo, un projet Interreg France-Suisse pour aider les entreprises neuchâteloises à produire autant avec moins d'énergie et de matières. Téléchargez la lettre d'intérêt.">
+<meta property="og:title" content="PoDeSo – Il ne manque plus que Neuchâtel">
+<meta property="og:description" content="Genève, Vaud, Fribourg et la Bourgogne-Franche-Comté sont à bord. Une lettre d'intérêt suffit, sans aucun engagement.">
+<meta property="og:image" content="carte-podeso.webp">
+<style>
+  :root {
+    --bg: #F3EEE4;
+    --paper: #FBF8F2;
+    --ink: #1E1E1C;
+    --muted: #57534A;
+    --line: #D9D2C4;
+    --yellow: #F6B400;
+    --yellow-ink: #8A6400;
+    --green: #2E8B57;
+    --green-soft: #DCEFE2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1B1A18;
+      --paper: #24221F;
+      --ink: #F1ECE2;
+      --muted: #B7B0A3;
+      --line: #3A3732;
+      --yellow-ink: #F6B400;
+      --green-soft: #1F3A2B;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 18px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 0 20px 64px; }
+  header { padding: 56px 0 24px; }
+  .kicker {
+    display: inline-block; font-size: 14px; font-weight: 700; letter-spacing: .06em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: 12px;
+  }
+  h1 { font-size: clamp(38px, 7vw, 60px); line-height: 1.05; margin: 0 0 20px; letter-spacing: -.02em; }
+  h1 em { font-style: normal; color: var(--yellow-ink); }
+  h2 { font-size: 28px; line-height: 1.2; margin: 56px 0 16px; letter-spacing: -.01em; }
+  p { margin: 0 0 16px; }
+  .lead { font-size: 21px; color: var(--ink); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 8px; }
+  .btn {
+    display: inline-block; padding: 14px 22px; border-radius: 999px; font-weight: 700;
+    text-decoration: none; border: 2px solid var(--ink);
+  }
+  .btn-primary { background: var(--yellow); color: #1E1E1C; border-color: var(--yellow); }
+  .btn-primary:hover { filter: brightness(1.05); }
+  .btn-ghost { color: var(--ink); }
+  .btn-ghost:hover { background: var(--paper); }
+  .small { font-size: 15px; color: var(--muted); }
+  figure { margin: 32px 0 0; }
+  figure img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid var(--line); }
+  figcaption { font-size: 15px; color: var(--muted); margin-top: 8px; }
+  .sound { font-weight: 800; letter-spacing: .02em; }
+  .steps { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin-top: 20px; }
+  @media (max-width: 680px) { .steps { grid-template-columns: 1fr; } }
+  .card {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 16px; padding: 20px;
+  }
+  .card .num {
+    display: inline-flex; width: 34px; height: 34px; border-radius: 50%; align-items: center; justify-content: center;
+    background: var(--ink); color: var(--bg); font-weight: 800; margin-bottom: 10px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 20px; }
+  .card p { margin: 0; font-size: 16px; color: var(--muted); }
+  .ask {
+    background: var(--paper); border: 2px solid var(--yellow); border-radius: 20px; padding: 24px; margin-top: 20px;
+  }
+  .ask ol { margin: 8px 0 16px; padding-left: 22px; }
+  .ask li { margin-bottom: 6px; }
+  .who { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; margin-top: 16px; }
+  @media (max-width: 680px) { .who { grid-template-columns: 1fr; } }
+  .who h3 { font-size: 16px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px; }
+  .who ul { list-style: none; padding: 0; margin: 0; }
+  .who li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .who li:last-child { border-bottom: 0; }
+  .tick { color: var(--green); font-weight: 800; margin-right: 6px; }
+  .timeline { list-style: none; padding: 0; margin: 16px 0 0; border-left: 3px solid var(--ink); }
+  .timeline li { position: relative; padding: 0 0 18px 22px; }
+  .timeline li::before {
+    content: ""; position: absolute; left: -9px; top: 6px; width: 15px; height: 15px; border-radius: 50%;
+    background: var(--bg); border: 3px solid var(--ink);
+  }
+  .timeline li.now::before { background: var(--yellow); border-color: var(--yellow); }
+  .timeline strong { display: block; }
+  details { border-bottom: 1px solid var(--line); padding: 14px 0; }
+  summary { cursor: pointer; font-weight: 700; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  .contact { background: var(--ink); color: var(--bg); border-radius: 20px; padding: 28px; margin-top: 56px; }
+  .contact h2 { margin-top: 0; color: var(--bg); }
+  .contact a { color: var(--yellow); }
+  footer { max-width: 760px; margin: 0 auto; padding: 0 20px 40px; font-size: 14px; color: var(--muted); }
+  a { color: inherit; }
+  a:focus-visible, .btn:focus-visible, summary:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <span class="kicker">Projet Interreg France-Suisse · PoDeSo</span>
+    <h1>Il ne manque plus que <em>Neuchâtel</em>.</h1>
+    <p class="lead">Genève, Vaud, Fribourg et la Bourgogne-Franche-Comté sont à bord. Il nous manque les entreprises neuchâteloises. Une lettre d'intérêt suffit, et elle ne vous engage à rien.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://docs.google.com/document/d/18b6aNJAn6An4qR6101tVieD1nGLjYaGFmoqFI8HRX0I/export?format=docx">Télécharger la lettre (Word)</a>
+      <a class="btn btn-ghost" href="mailto:info+interreg@fablab-chaux-de-fonds.ch?subject=PoDeSo%20%E2%80%93%20lettre%20d'int%C3%A9r%C3%AAt">Écrire à Mélanie</a>
+    </div>
+    <p class="small">Lettres attendues d'ici le 30 octobre 2026.</p>
+    <figure>
+      <img src="carte-podeso.webp" srcset="carte-podeso-600.webp 600w, carte-podeso.webp 1200w" sizes="(max-width: 760px) 100vw, 720px" width="1200" height="1200" alt="Carte de la Suisse romande et de la Bourgogne-Franche-Comté : la région française, Genève, Vaud et Fribourg sont cochés en vert, le canton de Neuchâtel est en jaune avec un point d'interrogation.">
+      <figcaption>En vert, les soutiens déjà acquis. En jaune, la pièce qui manque.</figcaption>
+    </figure>
+  </header>
+
+  <section>
+    <h2>Clac. Clac. Clac.</h2>
+    <p>Le bruit d'une presse dans un atelier de la Tchaux, à 7 heures du matin. Le métal entre, la pièce sort.</p>
+    <p>Et si demain le métal coûtait le double ? Si la facture d'électricité prenait un tiers de plus ? On continue à faire clac ?</p>
+    <p>PoDeSo parle de robustesse. Pas celle des bras, celle des entreprises : continuer à bien produire quand tout bouge autour, en utilisant moins d'énergie, de matières et d'eau. Beaucoup d'ateliers de la région ont déjà trouvé leurs astuces. Ce projet veut les faire connaître et les faire circuler.</p>
+  </section>
+
+  <section>
+    <h2>Le projet en trois temps</h2>
+    <div class="steps">
+      <div class="card">
+        <span class="num">1</span>
+        <h3>Repérer</h3>
+        <p>Des entretiens avec les filières et les entreprises qui avancent déjà. Ce qui marche est raconté dans des fiches simples, en accès libre.</p>
+      </div>
+      <div class="card">
+        <span class="num">2</span>
+        <h3>Réunir</h3>
+        <p>Un réseau franco-suisse d'entreprises et de collectivités. Des rencontres, des retours d'expérience entre pairs, des groupes d'échange.</p>
+      </div>
+      <div class="card">
+        <span class="num">3</span>
+        <h3>Accompagner</h3>
+        <p>Un appui concret pour les entreprises qui veulent aller plus loin et construire leur propre stratégie.</p>
+      </div>
+    </div>
+    <p class="small" style="margin-top:16px">Filières visées en priorité : horlogerie, microtechnique, mécanique de précision, construction, agroalimentaire, transport et logistique.</p>
+  </section>
+
+  <section>
+    <h2>Ce qu'on vous demande</h2>
+    <div class="ask">
+      <p><strong>Une lettre d'intérêt d'une page, déjà rédigée.</strong> Elle dit simplement que la démarche intéresse votre entreprise.</p>
+      <ol>
+        <li>Téléchargez le modèle et adaptez-le si vous le souhaitez.</li>
+        <li>Imprimez-le sur votre papier à en-tête et signez-le.</li>
+        <li>Renvoyez-le en PDF à <a href="mailto:info+interreg@fablab-chaux-de-fonds.ch">info+interreg@fablab-chaux-de-fonds.ch</a>, idéalement avant le 23 octobre, au plus tard le 30 octobre.</li>
+      </ol>
+      <p style="margin:0">Pas d'argent, pas d'heures à promettre, pas de données confidentielles à partager.</p>
+      <div class="actions" style="margin-bottom:0">
+        <a class="btn btn-primary" href="https://docs.google.com/document/d/18b6aNJAn6An4qR6101tVieD1nGLjYaGFmoqFI8HRX0I/export?format=docx">Télécharger la lettre (Word)</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Ce que vous y gagnez</h2>
+    <p>Les retours d'expérience d'autres industries de la région, en Suisse comme en France. Un cercle d'échange avec des gens qui se posent les mêmes questions que vous. Des outils et des fiches en accès libre. Et une place parmi les entreprises neuchâteloises qui ont pris le sujet en main les premières.</p>
+  </section>
+
+  <section>
+    <h2>Qui est à bord</h2>
+    <div class="who">
+      <div>
+        <h3>Partenaires du projet</h3>
+        <ul>
+          <li>FabLab La Chaux-de-Fonds</li>
+          <li>Low-Tech Lab Lausanne</li>
+          <li>Le Sous-marin jaune, Fribourg</li>
+          <li>France Active Bourgogne-Franche-Comté</li>
+          <li>Energy Cities</li>
+          <li>France Nature Environnement Bourgogne-Franche-Comté</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Soutiens déjà annoncés</h3>
+        <ul>
+          <li><span class="tick">✓</span>Services industriels de Genève</li>
+          <li><span class="tick">✓</span>Canton de Vaud</li>
+          <li><span class="tick">✓</span>Canton de Fribourg</li>
+          <li><span class="tick">✓</span>Côté français, partenariat complet</li>
+          <li>Canton de Neuchâtel et ses entreprises : <strong>à vous de jouer</strong></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Calendrier</h2>
+    <ul class="timeline">
+      <li class="now"><strong>Jusqu'au 30 octobre 2026</strong>Nous réunissons les lettres d'intérêt.</li>
+      <li><strong>6 novembre 2026</strong>Dépôt du dossier complet au programme Interreg France-Suisse.</li>
+      <li><strong>Mi-2027 à fin 2028</strong>Le projet se déroule sur 18 mois, si le financement est accordé.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Vos questions</h2>
+    <details>
+      <summary>Est-ce que la lettre nous engage ?</summary>
+      <p>Non. Elle exprime un intérêt, rien de plus. Si le projet est financé, vous serez invité·e aux rencontres et vous participerez à votre rythme, ou pas du tout.</p>
+    </details>
+    <details>
+      <summary>Et si le projet n'est pas financé ?</summary>
+      <p>La lettre devient sans objet, sans aucune suite pour vous.</p>
+    </details>
+    <details>
+      <summary>Nous n'avons encore rien fait sur ces questions. Est-ce pour nous ?</summary>
+      <p>Oui. Le réseau accueille aussi les entreprises qui démarrent : c'est justement l'idée d'apprendre de celles qui ont déjà essayé.</p>
+    </details>
+    <details>
+      <summary>Je ne suis pas la bonne personne dans mon entreprise.</summary>
+      <p>Transmettez cette page à la direction ou au responsable qualité, production ou durabilité. Ou écrivez-moi et dites-moi à qui m'adresser : je m'occupe du reste.</p>
+    </details>
+  </section>
+
+  <section class="contact">
+    <h2>On en parle ?</h2>
+    <p>Mélanie Thomas, co-présidente du FabLab La Chaux-de-Fonds.<br>
+    Je réponds à toutes vos questions, par mail ou par téléphone.</p>
+    <p><a href="mailto:info+interreg@fablab-chaux-de-fonds.ch">info+interreg@fablab-chaux-de-fonds.ch</a><br>
+    <a href="tel:+41762813830">076 281 38 30</a></p>
+    <p style="margin:0">FabLab La Chaux-de-Fonds · Rue de la Serre 68 · 2300 La Chaux-de-Fonds</p>
+  </section>
+</main>
+<footer>
+  <p>PoDeSo, pôle transfrontalier de structuration et de déploiement de la sobriété systémique, est un projet déposé au programme Interreg France-Suisse. Page sans traqueur ni cookie, volontairement légère.</p>
+</footer>
+</body>
+</html>
